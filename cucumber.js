@@ -1,21 +1,22 @@
 module.exports = {
 	default: {
-		tags: process.env.npm_config_TAGS || '',
+		tags:  '',
 		formatOptions: {
 			snippetInterface: 'async-await',
 		},
-		paths: ['src/test/features/'],
+		paths: ['src/test/features/', 'features'],
 		publishQuiet: true,
 		dryRun: false,
-		require: ['src/test/steps/*.ts', 'src/hooks/hooks.ts'],
+		require: ['src/test/step_definitions/*.ts', 'src/hooks/hooks.ts'], // Locate Step Defs and hooks
 		requireModule: ['ts-node/register'],
 		format: [
+			// 'usage',
 			'progress-bar',
 			'html:target/cucumber-report.html',
 			'json:target/cucumber-report.json',
 			'rerun:@rerun.txt',
 		],
-		parallel: 2,
+		// parallel: 2,
 	},
 	rerun: {
 		formatOptions: {
@@ -26,7 +27,8 @@ module.exports = {
 		require: ['src/test/steps/*.ts', 'src/hooks/hooks.ts'],
 		requireModule: ['ts-node/register'],
 		format: [
-			'progress-bar',
+			// 'usage',
+			'progress',
 			'html:target/cucumber-report.html',
 			'json:target/cucumber-report.json',
 			'rerun:@rerun.txt',

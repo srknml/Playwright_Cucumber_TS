@@ -13,3 +13,8 @@ Given('xxxx', async function () {
     console.log("xxxx")
 });
 
+Then('asda', async function () {
+    // Write code here that turns the phrase above into concrete actions
+    // return 'pending';
+    console.log("asdas")
+  });

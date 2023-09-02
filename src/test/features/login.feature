@@ -4,6 +4,7 @@ Feature: User Authentication tests
     And User enter the username as "seko"
     When xxxx
 
-    Scenario: Login should be success2
+  Scenario: Login should be success2
     And User enter the username as "seko"
     When xxxx
+    Then asda

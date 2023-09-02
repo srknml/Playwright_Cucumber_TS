@@ -15,11 +15,11 @@
             "line": 4,
             "name": "User enter the username as \"seko\"",
             "match": {
-              "location": "src\\test\\steps\\loginSteps.ts:6"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 24619000
+              "duration": 26936000
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 5,
             "name": "xxxx",
             "match": {
-              "location": "src\\test\\steps\\loginSteps.ts:11"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 1626800
+              "duration": 1534600
             }
           }
         ],
@@ -52,11 +52,11 @@
             "line": 8,
             "name": "User enter the username as \"seko\"",
             "match": {
-              "location": "src\\test\\steps\\loginSteps.ts:6"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 22016399
+              "duration": 23813799
             }
           },
           {
@@ -65,11 +65,24 @@
             "line": 9,
             "name": "xxxx",
             "match": {
-              "location": "src\\test\\steps\\loginSteps.ts:11"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 1599400
+              "duration": 2370600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "asda",
+            "match": {
+              "location": "src\\test\\step_definitions\\loginSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1551899
             }
           }
         ],
