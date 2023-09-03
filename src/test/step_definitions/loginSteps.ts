@@ -1,20 +1,31 @@
 import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
+import LoginPage from "../../pages/loginPage";
 
-import { expect } from "@playwright/test";
+import { chromium, Page, Browser, BrowserContext, expect } from "@playwright/test";
 
+// import { fixture } from "../../hooks/pageFixture";
+// let browser: Browser;
+// let context: BrowserContext;
+let loginPage: LoginPage = new LoginPage();
 
-Given('User enter the username as {string}', async function (username) {
+setDefaultTimeout(60 * 1000 * 2)
 
-    console.log(username)
+Given('User on the login page', async function () {
+    await loginPage.goto()
 });
 
-Given('xxxx', async function () {
+Given('User enters {string} and {string}', async function (username, password) {
 
-    console.log("xxxx")
+    await loginPage.enterCredentials(username, password)
 });
 
-Then('asda', async function () {
-    // Write code here that turns the phrase above into concrete actions
-    // return 'pending';
-    console.log("asdas")
-  });
+Given('User clicks login button', async function () {
+    await loginPage.clickLoginButton()
+
+});
+
+Then('User should be logged in with {string}', async function (username: string) {
+    await loginPage.verifyLoggedIn(username)
+
+
+});

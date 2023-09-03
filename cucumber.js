@@ -6,7 +6,7 @@ module.exports = {
 		},
 		paths: ['src/test/features/', 'features'],
 		publishQuiet: true,
-		dryRun: false,
+		// dryRun: true,
 		require: ['src/test/step_definitions/*.ts', 'src/hooks/hooks.ts'], // Locate Step Defs and hooks
 		requireModule: ['ts-node/register'],
 		format: [

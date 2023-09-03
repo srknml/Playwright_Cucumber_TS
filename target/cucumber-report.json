@@ -5,84 +5,68 @@
       {
         "description": "",
         "id": "user-authentication-tests;login-should-be-success",
-        "keyword": "Scenario",
-        "line": 3,
+        "keyword": "Scenario Outline",
+        "line": 13,
         "name": "Login should be success",
         "steps": [
           {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 4,
-            "name": "User enter the username as \"seko\"",
-            "match": {
-              "location": "src\\test\\step_definitions\\loginSteps.ts:6"
-            },
+            "keyword": "Before",
+            "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 26936000
+              "duration": 571600
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "Given ",
             "line": 5,
-            "name": "xxxx",
+            "name": "User on the login page",
             "match": {
-              "location": "src\\test\\step_definitions\\loginSteps.ts:11"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:46"
             },
             "result": {
               "status": "passed",
-              "duration": 1534600
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "user-authentication-tests;login-should-be-success2",
-        "keyword": "Scenario",
-        "line": 7,
-        "name": "Login should be success2",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "User enter the username as \"seko\"",
-            "match": {
-              "location": "src\\test\\step_definitions\\loginSteps.ts:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 23813799
+              "duration": 2470223300
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "xxxx",
+            "keyword": "Given ",
+            "line": 8,
+            "name": "User enters \"meja123\" and \"Meja123.\"",
             "match": {
-              "location": "src\\test\\step_definitions\\loginSteps.ts:11"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:58"
             },
             "result": {
               "status": "passed",
-              "duration": 2370600
+              "duration": 117376699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "User clicks login button",
+            "match": {
+              "location": "src\\test\\step_definitions\\loginSteps.ts:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 170880099
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 10,
-            "name": "asda",
+            "name": "User should be logged in with \"meja123\"",
             "match": {
-              "location": "src\\test\\step_definitions\\loginSteps.ts:16"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:82"
             },
             "result": {
               "status": "passed",
-              "duration": 1551899
+              "duration": 558244099
             }
           }
         ],
