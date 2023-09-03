@@ -3,9 +3,6 @@ import LoginPage from "../../pages/loginPage";
 
 import { chromium, Page, Browser, BrowserContext, expect } from "@playwright/test";
 
-// import { fixture } from "../../hooks/pageFixture";
-// let browser: Browser;
-// let context: BrowserContext;
 let loginPage: LoginPage = new LoginPage();
 
 setDefaultTimeout(60 * 1000 * 2)
