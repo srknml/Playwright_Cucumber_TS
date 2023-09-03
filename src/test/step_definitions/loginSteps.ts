@@ -1,7 +1,6 @@
 import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
 import LoginPage from "../../pages/loginPage";
 
-import { chromium, Page, Browser, BrowserContext, expect } from "@playwright/test";
 
 let loginPage: LoginPage = new LoginPage();
 
@@ -24,5 +23,8 @@ Given('User clicks login button', async function () {
 Then('User should be logged in with {string}', async function (username: string) {
     await loginPage.verifyLoggedIn(username)
 
+});
 
+Then('User should not be logged in with {string}', async function (string) {
+    loginPage.verifyErrorMessage()
 });

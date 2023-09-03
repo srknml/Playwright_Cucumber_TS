@@ -14,7 +14,7 @@ export default class LoginPage extends BasePage {
         userInput: "Username",
         passwordInput: "Password",
         loginBtn: "button[color='primary']",
-        errorMessage: "alert",
+        errorMessage: "mat-error[role='alert']",
         usernameLabel: function (username: string): string {
             return "//span[@class='mat-button-wrapper' and contains(text(),'" + username + "')]"
         },
@@ -42,6 +42,9 @@ export default class LoginPage extends BasePage {
 
     async verifyLoggedIn(username: string) {
         await expect(fixture.page.locator(this.Elements.usernameLabel(username))).toHaveCount(1)
+    }
+    async verifyErrorMessage() {
+        await expect(fixture.page.locator(this.Elements.errorMessage)).toBeVisible({ timeout: 10000 })
     }
 
 }

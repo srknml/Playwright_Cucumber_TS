@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 666999
+              "duration": 1392999
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 5,
             "name": "User on the login page",
             "match": {
-              "location": "src\\test\\step_definitions\\loginSteps.ts:46"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 3161717000
+              "duration": 3094812600
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 8,
             "name": "User enters \"meja123\" and \"Meja123.\"",
             "match": {
-              "location": "src\\test\\step_definitions\\loginSteps.ts:58"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:55"
             },
             "result": {
               "status": "passed",
-              "duration": 112762499
+              "duration": 120146500
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 9,
             "name": "User clicks login button",
             "match": {
-              "location": "src\\test\\step_definitions\\loginSteps.ts:70"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:67"
             },
             "result": {
               "status": "passed",
-              "duration": 195315799
+              "duration": 183992700
             }
           },
           {
@@ -62,15 +62,172 @@
             "line": 10,
             "name": "User should be logged in with \"meja123\"",
             "match": {
-              "location": "src\\test\\step_definitions\\loginSteps.ts:82"
+              "location": "src\\test\\step_definitions\\loginSteps.ts:79"
             },
             "result": {
               "status": "passed",
-              "duration": 895021399
+              "duration": 899810599
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@happy",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-authentication-tests;login-should-be-unsuccess",
+        "keyword": "Scenario Outline",
+        "line": 22,
+        "name": "Login should be unsuccess",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 187700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User on the login page",
+            "match": {
+              "location": "src\\test\\step_definitions\\loginSteps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 301645999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "User enters \"meja123123\" and \"Meja12313.\"",
+            "match": {
+              "location": "src\\test\\step_definitions\\loginSteps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105121399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "User clicks login button",
+            "match": {
+              "location": "src\\test\\step_definitions\\loginSteps.ts:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68561099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "User should not be logged in with \"meja123123\"",
+            "match": {
+              "location": "src\\test\\step_definitions\\loginSteps.ts:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sad",
+            "line": 15
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-authentication-tests;login-should-be-unsuccess",
+        "keyword": "Scenario Outline",
+        "line": 23,
+        "name": "Login should be unsuccess",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 186400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User on the login page",
+            "match": {
+              "location": "src\\test\\step_definitions\\loginSteps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 515602600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "User enters \"meja123s123\" and \"Mejsa12313.\"",
+            "match": {
+              "location": "src\\test\\step_definitions\\loginSteps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 93715899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "User clicks login button",
+            "match": {
+              "location": "src\\test\\step_definitions\\loginSteps.ts:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63615199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "User should not be logged in with \"meja123s123\"",
+            "match": {
+              "location": "src\\test\\step_definitions\\loginSteps.ts:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6467799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sad",
+            "line": 15
+          }
+        ],
         "type": "scenario"
       }
     ],
