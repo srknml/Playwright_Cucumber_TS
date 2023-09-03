@@ -4,8 +4,7 @@ import { pageFixture as fixture } from "../helper/fixtures/pageFixture";
 
 
 export default class LoginPage extends BasePage {
-    private base: BasePage
-    private url = this.BASE_URL + '/login'
+    private url: string
 
 
 
@@ -15,19 +14,21 @@ export default class LoginPage extends BasePage {
         userInput: "Username",
         passwordInput: "Password",
         loginBtn: "button[color='primary']",
-        errorMessage: "alert"
+        errorMessage: "alert",
+        usernameLabel: function (username: string): string {
+            return "//span[@class='mat-button-wrapper' and contains(text(),'" + username + "')]"
+        },
     }
-    // span[@class='mat-button-wrapper']//*[contains(text(),'meja123')]
     constructor() {
         super();
-        this.base = new BasePage()
         this.title = "BookCart"
+        this.url = this.BASE_URL + '/login'
 
     }
 
     async goto() {
         await fixture.page.goto(this.url)
-        expect(fixture.page).toHaveTitle("BookCart")
+        expect(fixture.page).toHaveTitle(this.title)
 
     }
     async enterCredentials(username: string, password: string) {
@@ -40,7 +41,7 @@ export default class LoginPage extends BasePage {
     }
 
     async verifyLoggedIn(username: string) {
-        await expect(fixture.page.locator("//span[@class='mat-button-wrapper' and contains(text(),'" + username + "')]")).toHaveCount(1)
+        await expect(fixture.page.locator(this.Elements.usernameLabel(username))).toHaveCount(1)
     }
 
 }

@@ -6,9 +6,8 @@ export default class Base {
     constructor() {
 
     }
-    public page: Page;
-    protected BASE_URL: String = "https://bookcart.azurewebsites.net"
-    protected title: String;
+    protected BASE_URL: string = "https://bookcart.azurewebsites.net"
+    protected title: string;
 
 
 
