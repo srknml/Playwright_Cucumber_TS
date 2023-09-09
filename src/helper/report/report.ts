@@ -1,28 +1,24 @@
-const report = require("multiple-cucumber-html-reporter");
 
-report.generate({
-    jsonDir: "target",
-    reportPath: "target/reports/",
-    reportName: "Playwright Automation Report",
-    pageTitle: "BookCart App test report",
-    displayDuration: false,
+var reporter = require('cucumber-html-reporter');
+
+var options = {
+    theme: 'bootstrap',
+    jsonFile: 'target/cucumber_report.json',
+    output: 'target/cucumber_report.html',
+    reportSuiteAsScenarios: true,
+    // storeScreenshots: true,
+    // screenshotsDirectory: "target/screenshots/",
+    scenarioTimestamp: true,
+    launchReport: false,
     metadata: {
-        browser: {
-            name: "chrome",
-            version: "112",
-        },
-        device: "Seko",
-        platform: {
-            name: "Windows",
-            version: "10",
-        },
+        "App Version": "0.3.2",
+        "Test Environment": "STAGING",
+        "Browser": "Chrome  54.0.2840.98",
+        "Platform": "Windows 10",
+        "Parallel": "Scenarios",
+        "Executed": "Remote"
     },
-    customData: {
-        title: "Test Info",
-        data: [
-            { label: "Project", value: "Book Cart Application" },
-            { label: "Release", value: "1.2.3" },
-            { label: "Cycle", value: "Smoke-1" }
-        ],
-    },
-});
+    failedSummaryReport: true,
+};
+
+reporter.generate(options);

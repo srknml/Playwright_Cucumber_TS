@@ -1,12 +1,15 @@
-import { BeforeAll, AfterAll, Before, After, Status } from "@cucumber/cucumber";
-import { Browser, chromium, BrowserContext, Page } from "@playwright/test";
-import { pageFixture as fixture } from "../../helper/fixtures/pageFixture";
+import { BeforeAll, AfterAll, Before, After, Status, World, ITestCaseHookParameter } from "@cucumber/cucumber";
+import { Browser, chromium, BrowserContext, Page, test } from "@playwright/test";
+import { pageFixture as fixture, pageFixture } from "../../helper/fixtures/pageFixture";
+import { TestStepResultStatus } from "@cucumber/messages";
+import { invokeBrowser } from "../../helper/driver/driver";
 
 let browser: Browser;
 let context: BrowserContext
+// let world = this;
 
 BeforeAll(async () => {
-    browser = await chromium.launch({ headless: false })
+    browser = await invokeBrowser()
 })
 
 Before(async () => {
@@ -14,11 +17,20 @@ Before(async () => {
     fixture.page = await context.newPage()
 
 });
+const takeScreenShot = async (world: World, scenario: ITestCaseHookParameter) => {
 
-After(async () => {
+    const screenShot = await fixture.page?.screenshot({
+        path: "./target/screenshots/" + scenario.pickle.name + ".png",
+        fullPage: true,
+    });
+    // attach the screenshot using World's attach()
+    if (screenShot) await world.attach(screenShot, 'image/png');
+};
 
 
-    //@TODO. Needs to be fixed.
+After(async function (scenario) {
+    // Can't use the arrow function to access "this".
+    await takeScreenShot(this, scenario)
     await fixture.page.close()
     await context.close()
 })

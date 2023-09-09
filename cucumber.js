@@ -12,8 +12,8 @@ module.exports = {
 		format: [
 			// 'usage',
 			'progress-bar',
-			'html:target/cucumber-report.html',
-			'json:target/cucumber-report.json',
+			'html:target/cucumber_report.html',
+			'json:target/cucumber_report.json',
 			'rerun:@rerun.txt',
 		],
 		// parallel: 2,
