@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1392999
+              "duration": 316747500
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3094812600
+              "duration": 2527207400
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 120146500
+              "duration": 115503799
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 183992700
+              "duration": 222934100
             }
           },
           {
@@ -66,7 +66,15 @@
             },
             "result": {
               "status": "passed",
-              "duration": 899810599
+              "duration": 552791799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 138897200
             }
           }
         ],
@@ -90,7 +98,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 187700
+              "duration": 255585400
             }
           },
           {
@@ -103,7 +111,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 301645999
+              "duration": 3517015799
             }
           },
           {
@@ -116,7 +124,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 105121399
+              "duration": 145256899
             }
           },
           {
@@ -129,20 +137,28 @@
             },
             "result": {
               "status": "passed",
-              "duration": 68561099
+              "duration": 68784099
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 19,
-            "name": "User should not be logged in with \"meja123123\"",
+            "name": "User should not be logged in",
             "match": {
               "location": "src\\test\\step_definitions\\loginSteps.ts:91"
             },
             "result": {
               "status": "passed",
-              "duration": 8000900
+              "duration": 381409100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 42043199
             }
           }
         ],
@@ -166,7 +182,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 186400
+              "duration": 250195100
             }
           },
           {
@@ -179,7 +195,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 515602600
+              "duration": 2035389700
             }
           },
           {
@@ -192,7 +208,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 93715899
+              "duration": 125484899
             }
           },
           {
@@ -205,20 +221,28 @@
             },
             "result": {
               "status": "passed",
-              "duration": 63615199
+              "duration": 68818199
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 19,
-            "name": "User should not be logged in with \"meja123s123\"",
+            "name": "User should not be logged in",
             "match": {
               "location": "src\\test\\step_definitions\\loginSteps.ts:91"
             },
             "result": {
               "status": "passed",
-              "duration": 6467799
+              "duration": 376887499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 59628100
             }
           }
         ],

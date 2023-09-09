@@ -16,13 +16,8 @@ Feature: User Authentication tests
   Scenario Outline: Login should be unsuccess
     Given User enters "<username>" and "<password>"
     And User clicks login button
-    Then User should not be logged in with "<username>"
+    Then User should not be logged in
     Examples:
       | username    | password    |
       | meja123123  | Meja12313.  |
       | meja123s123 | Mejsa12313. |
-
-# Scenario: Login should be success2
-#   And User enter the username as "seko"
-#   When xxxx
-#   Then asda

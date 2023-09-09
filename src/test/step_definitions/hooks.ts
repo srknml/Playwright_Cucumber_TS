@@ -3,18 +3,26 @@ import { Browser, chromium, BrowserContext, Page } from "@playwright/test";
 import { pageFixture as fixture } from "../../helper/fixtures/pageFixture";
 
 let browser: Browser;
+let context: BrowserContext
 
 BeforeAll(async () => {
-
     browser = await chromium.launch({ headless: false })
-    fixture.page = await browser.newPage()
+})
+
+Before(async () => {
+    context = await browser.newContext()
+    fixture.page = await context.newPage()
 
 });
 
-AfterAll(async () => {
-    //@TODO. Needs to be fixed.
-    setTimeout(async () => {
-        await browser.close()
-    }, 3000)
+After(async () => {
 
+
+    //@TODO. Needs to be fixed.
+    await fixture.page.close()
+    await context.close()
+})
+
+AfterAll(async () => {
+    await browser.close()
 })

@@ -1,12 +1,9 @@
-import { expect, Page } from "@playwright/test";
+import { expect } from "@playwright/test";
 import BasePage from "./base";
 import { pageFixture as fixture } from "../helper/fixtures/pageFixture";
 
-
 export default class LoginPage extends BasePage {
     private url: string
-
-
 
 
     private Elements = {
@@ -14,7 +11,7 @@ export default class LoginPage extends BasePage {
         userInput: "Username",
         passwordInput: "Password",
         loginBtn: "button[color='primary']",
-        errorMessage: "mat-error[role='alert']",
+        errorMessage: "//mat-error[@id='mat-error-0']",
         usernameLabel: function (username: string): string {
             return "//span[@class='mat-button-wrapper' and contains(text(),'" + username + "')]"
         },
@@ -23,7 +20,6 @@ export default class LoginPage extends BasePage {
         super();
         this.title = "BookCart"
         this.url = this.BASE_URL + '/login'
-
     }
 
     async goto() {
@@ -32,7 +28,6 @@ export default class LoginPage extends BasePage {
 
     }
     async enterCredentials(username: string, password: string) {
-
         await fixture.page.getByLabel(this.Elements.userInput).fill(username);
         await fixture.page.getByLabel(this.Elements.passwordInput).fill(password);
     }
@@ -44,7 +39,8 @@ export default class LoginPage extends BasePage {
         await expect(fixture.page.locator(this.Elements.usernameLabel(username))).toHaveCount(1)
     }
     async verifyErrorMessage() {
-        await expect(fixture.page.locator(this.Elements.errorMessage)).toBeVisible({ timeout: 10000 })
+        let element = await fixture.page.locator(this.Elements.errorMessage)
+        await expect(element).toBeVisible({ timeout: 10000 })
     }
 
 }
